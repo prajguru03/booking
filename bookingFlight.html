@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight</title>
+    <style>
+        header {
+            width: 100%;
+            height: 250px;
+            background-color: #003b94;
+            color: white;
+            align-items: center;
+        }
+
+        .top {
+            display: flex;
+
+        }
+
+        .top-end {
+            margin-left: 800px;
+            display: flex;
+            padding: 20px;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            line-height: 24px;
+            font-style: normal;
+        }
+
+        .nav {
+            text-decoration: none;
+
+        }
+
+        .list-content {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        li {
+            float: left;
+            padding: 20px;
+            font-size: large;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+        }
+
+        .togo {
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 0px;
+            margin: 0%;
+            white-space: nowrap;
+        }
+
+        button{
+            font-size: large;
+            background-color: white;
+            color: #003b94;
+            height: 40px;
+            width: 100px;
+            color: rgb(0, 108, 228);
+            text-align: center;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(220, 239, 246);
+        }
+
+        #p {
+            color: white;
+        }
+
+        #togo-btn {
+            font-size: large;
+            background-color: white;
+            color: #003b94;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #togo-btn:hover {
+            background-color: rgb(220, 239, 246);
+
+        }
+
+        li:hover {
+            background-color: gray;
+            border-radius: 20px;
+            height: fit-content;
+            border: white solid 2px;
+        }
+
+        /*  */
+        main {
+            text-align: center;
+            background-color: rgb(203, 226, 235);
+            font-size: large;
+            margin-top: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+
+        }
+
+        .label {
+            text-align: center;
+            font-size: large;
+            /* margin-top: 60px; */
+            box-sizing: content-box;
+            box-shadow: thistle;
+            border: #ffb700 solid thin;
+            border-width: 10px;
+            height: 70px;
+            align-content: center;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        input {
+            height: 50px;
+            width: 250px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            align-content: center;
+            font-size: x-large;
+        }
+/* 
+        button {
+            font-size: large;
+            background-color: #003b94;
+            color: white;
+            align-content: center;
+            margin: 0;
+        } */
+
+        .search {
+            font-size: xx-large;
+            background-color: #003b94;
+            color: white;
+            align-content: center;
+            margin: 0;
+        }
+
+
+        main input {
+            width: auto;
+
+        }
+        .new {
+            width: 100px;
+            height: 20px;
+        }
+
+        .row {
+            display: flex;
+
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        /* .column img:hover{
+            transform: scale(2); 
+        } */
+
+        .flight-details {
+            flex-grow: 1;
+        }
+
+        .flight-details h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .flight-details p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .flight-details .price {
+            font-size: 20px;
+            color: #e67e22;
+        }
+
+        /* #booknow {
+            font-size: large;
+            background-color: #0071c2;
+            color: white;
+            align-content: center;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+        } */
+        #booknow{
+            font-size: large;
+            background-color: gray;
+            color: white;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            align-content: center;
+          
+        }
+        #booknow:hover{
+            background-color: rgb(5, 253, 174);
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #0071c2;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <Header>
+        <div class="top">
+            <div>
+                <h2 style="margin-left: 30px;">Booking.com</h2>
+            </div>
+            <div class="top-end">
+                <a
+                    href="https://www.booking.com/index.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvnY2rQGwAIB0gIkZWY5N2IzZmYtMDBlYS00MTdmLTg0MjEtMmQzODc3OTQwMmQz2AIF4AIB&sid=de752e9f70c711d57d6ed5c014bcaad4">
+                    <p id="p" style="margin: 10px;"> INR </p>
+                </a>
+                <a
+                    href="https://join.booking.com/?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvnY2rQGwAIB0gIkZWY5N2IzZmYtMDBlYS00MTdmLTg0MjEtMmQzODc3OTQwMmQz2AIF4AIB&lang=en-us&sid=de752e9f70c711d57d6ed5c014bcaad4&utm_medium=frontend&utm_source=topbar">
+                    <p id="p" style="margin: 10px;">List Property</p>
+                </a>
+                <a href="registration.html">
+                    <button type="button"  style="margin: 10px;">Register</button>
+                </a><br><br>
+                <a href="login.html">
+                    <button type="button"  style="margin: 10px;">Sign in</button>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<p> <img src="icons8-india-48.png" alt="" width="40px" height="40px"></p>
+
+            </div>
+        </div>
+        <div class="nav">
+            <ul style="list-style-type: none;">
+                <li><img src="icons8-home-32.png" alt="" width="20px"><a href="bookingHome.html" class="list-content">Home</a></li>
+                <li><img src="icons8-single-bed-48.png" alt="" width="20px"> <a href="bookingStay.html"
+                        class="list-content">Stays</a></li>
+                <li><img src="icons8-plane-50.png" alt="" width="20px"><a href="bookingFlight.html"
+                        class="list-content"> Flights</a></li>
+                <li><img src="icons8-car-48.png" alt="" width="20px"><a href="bookingCarRental.html"
+                        class="list-content"> Car Rentals</a> </li>
+            </ul>
+        </div>
+    </Header>
+
+    <div class="container">
+        <section>
+            <h1>Popular flights near you</h1>
+            <div class="row">
+                <div class="column">
+                    <img src="mubaitodubai.webp" alt="Snow" style="width:100%">
+                    <div class="flight-details">
+                        <h2>Flight To Dubai</h2>
+                        <p>Departure: Mumbai</p>
+                        <p>Airline: Indian Airlines</p>
+                        <span class="price">$500</span>
+                    </div>
+                    <br><br><br>
+                    <a
+                        href="https://flights.booking.com/flights/AMD-DXB/?type=ROUNDTRIP&adults=1&cabinClass=ECONOMY&sort=BEST&depart=2024-07-16&return=2024-07-23&from=AMD&to=DXB&ca_source=flights_index_cf&aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4ApvWuLQGwAIB0gIkMzhkZmM4MzUtNmJjNy00MGU5LThmM2YtMTNjZTUyNWI2ZGU02AIF4AIB">
+
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+
+
+                </div>
+                <div class="column">
+                    <img src="mumbaitobankok.webp" alt="Snow" style="width:100%">
+                    <div class="flight-details">
+                        <h2>Flight To Bankok</h2>
+                        <p>Departure: Mumbai</p>
+                        <p>Airline: Air India</p>
+                        <span class="price">$750</span>
+                    </div>
+                    <br><br><br>
+                    <a
+                        href="https://flights.booking.com/flights/AMD-BKK/?type=ROUNDTRIP&adults=1&cabinClass=ECONOMY&sort=BEST&depart=2024-07-16&return=2024-07-23&from=AMD&to=BKK&ca_source=flights_index_cf&aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4ApvWuLQGwAIB0gIkMzhkZmM4MzUtNmJjNy00MGU5LThmM2YtMTNjZTUyNWI2ZGU02AIF4AIB">
+
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+                </div>
+                <div class="column">
+                    <img src="mumbaitomale.webp" alt="Snow" style="width:100%">
+                    <div class="flight-details">
+                        <h2>Flight To Male</h2>
+                        <p>Departure: Dubai</p>
+                        <p>Airline: Emirates</p>
+                        <span class="price">$1200</span>
+                    </div>
+                    <br><br><br>
+                    <a
+                        href="https://flights.booking.com/flights/AMD-MLE/?type=ROUNDTRIP&adults=1&cabinClass=ECONOMY&sort=BEST&depart=2024-07-16&return=2024-07-23&from=AMD&to=MLE&ca_source=flights_index_cf&aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4ApvWuLQGwAIB0gIkMzhkZmM4MzUtNmJjNy00MGU5LThmM2YtMTNjZTUyNWI2ZGU02AIF4AIB">
+
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+
+                </div>
+                <div class="column">
+                    <img src="mumbaitosingapore.webp" alt="Snow" style="width:100%">
+                    <div class="flight-details">
+                        <h2>Flight To Singapore</h2>
+                        <p>Departure: Delhi</p>
+                        <p>Airline: Indigo Airlines</p>
+                        <span class="price">$900</span>
+                    </div>
+                    <br><br><br>
+                    <a
+                        href="https://flights.booking.com/flights/AMD-SIN/?type=ROUNDTRIP&adults=1&cabinClass=ECONOMY&sort=BEST&depart=2024-07-12&return=2024-07-19&from=AMD&to=SIN&ca_source=flights_index_cf&aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4ApvWuLQGwAIB0gIkMzhkZmM4MzUtNmJjNy00MGU5LThmM2YtMTNjZTUyNWI2ZGU02AIF4AIB">
+
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+
+                </div>
+
+
+        </section>
+
+
+        <main>
+
+            <input class="new" type="radio" name="Flight" id="roadTrip" value="roadTrip">
+            <label for="roadTrip">Road Trip</label>
+
+            <input class="new" type="radio" name="Flight" id="oneWay" value="oneWay">
+            <label for="oneWay">One Way</label>
+
+            <input class="new" type="checkbox" name="Flight" id="direct" value="direct">
+            <label for="direct">Direct Flight Only</label>
+
+        </main>
+        <br><br><br><br>
+
+
+        <div class="label">
+
+            <input type="text" id="From" name="From" width="50" height="100" required placeholder="From">
+            <input type="text" id="Where" name="Where" width="50" height="100" required placeholder="Where">
+            <input type="date" id="date" name="date" width="50" height="100" required>
+            <input type="number" id="people" size="100" required min="1" placeholder="Peoples">
+            <a
+                href="https://flights.booking.com/flights/PNQ.AIRPORT-DEL.AIRPORT/?type=ROUNDTRIP&adults=1&cabinClass=ECONOMY&children=&from=PNQ.AIRPORT&to=DEL.AIRPORT&fromCountry=IN&toCountry=IN&fromLocationName=Pune+International+Airport&toLocationName=Delhi+International+Airport&depart=2024-08-17&return=2024-08-24&sort=BEST&travelPurpose=leisure&ca_source=flights_index_sb&aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AsP4ybQGwAIB0gIkYzk2NGFlM2YtM2QwMi00N2IwLTg5ODYtZWVjNjUxYTg5NjBk2AIF4AIB">
+                <button id="togo-btn" class="search" type="submit" onclick="href">Search</button>
+            </a>
+        </div>
+        <br><br><br><br><br>
+    </div>
+    <footer>
+        <p>&copy; 2024 Booking.com Clone. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

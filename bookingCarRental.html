@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            width: 100%;
+            height: 250px;
+            background-color: #003b94;
+            color: white;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            text-align: start;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .top {
+            display: flex;
+
+        }
+
+        .top-end {
+            margin-left: 800px;
+            display: flex;
+            padding: 20px;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            line-height: 24px;
+            font-style: normal;
+        }
+
+        .nav {
+            text-decoration: none;
+
+        }
+
+        .list-content {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        li {
+            float: left;
+            padding: 20px;
+            font-size: large;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+        }
+
+        .togo {
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 0px;
+            margin: 0%;
+            white-space: nowrap;
+        }
+
+        button {
+            font-size: large;
+            background-color: white;
+            color: #003b94;
+            height: 40px;
+            width: 100px;
+            color: rgb(0, 108, 228);
+            text-align: center;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(220, 239, 246);
+        }
+
+        #p {
+            color: white;
+        }
+
+        #togo-btn {
+            font-size: large;
+            background-color: white;
+            color: #003b94;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #togo-btn:hover {
+            background-color: rgb(220, 239, 246);
+
+        }
+
+        li:hover {
+            background-color: gray;
+            border-radius: 20px;
+            height: fit-content;
+            border: white solid 2px;
+        }
+
+        .button {
+            text-align: end;
+        }
+
+        .navitem {
+            width: 100%;
+        }
+        
+
+        #booknow{
+            font-size: large;
+            background-color: gray;
+            color: white;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+        #booknow:hover{
+            background-color: rgb(206, 241, 230);
+        }
+        h3{
+            font-weight: 10600;
+            font-size: x-large;
+            font-family:  BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        h2{
+            font-weight: 900;
+            font-size: large;
+            font-family:  BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        span{
+            color: red;
+            font-family:  BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+        }
+        p{
+            font-family:   BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        .car {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .car img {
+            max-width: 100%;
+            height: auto;
+        }
+        .car img:hover{
+            transform: scale(3); 
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 0.5em 0 0.2em;
+        }
+
+        input,
+        select {
+            padding: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .bg-car {
+            position: absolute;
+            /* background-color: var(--secondary-bg-color); */
+            background-color: #ffffff;
+            height: 50%;
+            width: 50%;
+            bottom: 0;
+            right: 20%;
+            
+            border-radius: 100px 0 0 0;
+            align-content: center;
+        }
+
+        #img-car {
+            z-index: 1
+        }
+
+        .carrental {
+            max-width: 1200px;
+            margin: 0 auto;
+            align-content: center;
+            /* margin-left: 100px; */
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 5px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+        }
+
+        footer {
+            background-color: #0071c2;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <Header>
+        <div class="top">
+            <div>
+                <h2 style="margin-left: 30px;">Booking.com</h2>
+            </div>
+            <div class="top-end">
+                <a
+                    href="https://www.booking.com/index.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvnY2rQGwAIB0gIkZWY5N2IzZmYtMDBlYS00MTdmLTg0MjEtMmQzODc3OTQwMmQz2AIF4AIB&sid=de752e9f70c711d57d6ed5c014bcaad4">
+                    <p id="p" style="margin: 10px;"> INR </p>
+                </a>
+                <a
+                    href="https://join.booking.com/?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AvnY2rQGwAIB0gIkZWY5N2IzZmYtMDBlYS00MTdmLTg0MjEtMmQzODc3OTQwMmQz2AIF4AIB&lang=en-us&sid=de752e9f70c711d57d6ed5c014bcaad4&utm_medium=frontend&utm_source=topbar">
+                    <p id="p" style="margin: 10px;">List Property</p>
+                </a>
+                <a href="registration.html">
+                    <button type="button" style="margin: 10px;">Register</button>
+                </a><br><br>
+                <a href="login.html">
+                    <button type="button" style="margin: 10px;">Sign in</button>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<p> <img src="icons8-india-48.png" alt="" width="40px" height="40px"></p>
+
+            </div>
+        </div>
+        <div class="nav">
+            <ul style="list-style-type: none;">
+                <li><img src="icons8-home-32.png" alt="" width="20px"><a href="bookingHome.html"
+                        class="list-content">Home</a></li>
+                <li><img src="icons8-single-bed-48.png" alt="" width="20px"> <a href="bookingStay.html"
+                        class="list-content">Stays</a></li>
+                <li><img src="icons8-plane-50.png" alt="" width="20px"><a href="bookingFlight.html"
+                        class="list-content"> Flights</a></li>
+                <li><img src="icons8-car-48.png" alt="" width="20px"><a href="bookingCarRental.html"
+                        class="list-content"> Car Rentals</a> </li>
+            </ul>
+        </div>
+    </Header>
+
+    <section class="carrental">
+        <h2>Car Rental Service</h2>
+        <div id="car-img">
+            <div class="bg-car">
+            <img src="https://i.ibb.co/PxNtW0p/Mercedes-Car-EQC-300k-W-Edition-900x598-1.png" class="w-100" alt="car"
+                id="img-car" />
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <main>
+            <section id="cars">
+                <h2>Available Cars</h2>
+                <div class="car" id="car1">
+                    <img src="sedan.jpg" alt="Sedan" width="400px" height="20px">
+                    <h3>Sedan</h3>
+                    <p>Comfortable and spacious, ideal for city rides.</p>
+                    <p>Price: <span>$50/day</span></p>
+                    <a
+                        href="https://www.booking.com/cars/airport/es/pmi.html?label=gen173nr-1fcaeoggi46adim1geagyiaqgyatg4arfiaqzyaqhoaqh4aqkiaggoago4asp4ybqgwaib0gikyzk2ngflm2ytm2qwmi00n2iwltg5odytzwvjnjuxytg5njbk2aif4aib&sid=de752e9f70c711d57d6ed5c014bcaad4&aid=304142">
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+                </div>
+                <div class="car" id="car2">
+                    <img src="suv.webp" alt="SUV" width="400px" height="20px">
+                    <h3>SUV</h3>
+                    <p>Perfect for family trips and off-road adventures.</p>
+                    <p>Price: <span> $80/day</span></p>
+                    <a
+                        href="https://www.booking.com/cars/city/us/el-segundo.html?label=gen173nr-1fcaeoggi46adim1geagyiaqgyatg4arfiaqzyaqhoaqh4aqkiaggoago4asp4ybqgwaib0gikyzk2ngflm2ytm2qwmi00n2iwltg5odytzwvjnjuxytg5njbk2aif4aib&sid=de752e9f70c711d57d6ed5c014bcaad4&aid=304142">
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+                </div>
+                <div class="car" id="car3">
+                    <img src="sport.jpg" alt="Sports Car" width="400px" height="20px">
+                    <h3>Sports Car</h3>
+                    <p>Experience the thrill of driving a high-performance car.</p>
+                    <p>Price: <span>$150/day</span></p>
+                    <a
+                        href="https://www.booking.com/cars/airport/us/mco.html?label=gen173nr-1fcaeoggi46adim1geagyiaqgyatg4arfiaqzyaqhoaqh4aqkiaggoago4asp4ybqgwaib0gikyzk2ngflm2ytm2qwmi00n2iwltg5odytzwvjnjuxytg5njbk2aif4aib&sid=de752e9f70c711d57d6ed5c014bcaad4&aid=304142">
+                        <button id="booknow" type="button">Book Now</button>
+                    </a>
+                </div>
+            </section>
+
+
+
+
+            <section id="book">
+                <h2>Book a Car</h2>
+                <form id="booking-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="car">Select Car:</label>
+                    <select id="car" name="car">
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="sports">Sports Car</option>
+                    </select>
+
+                    <label for="date">Rental Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <a
+                        href="https://www.booking.com/cars/city/it/rome.html?label=gen173nr-1fcaeoggi46adim1geagyiaqgyatg4arfiaqzyaqhoaqh4aqkiaggoago4asp4ybqgwaib0gikyzk2ngflm2ytm2qwmi00n2iwltg5odytzwvjnjuxytg5njbk2aif4aib&sid=de752e9f70c711d57d6ed5c014bcaad4&aid=304142">
+                        <input type="submit" value="Book Now">
+                    </a>
+                </form>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Email: infocarrental@booking.com</p>
+                <p>Phone: +91 234 567 890</p>
+            </section>
+        </main>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Booking.com Clone. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
